@@ -1,12 +1,14 @@
 import * as fs from "node:fs";
 
-export const exportJsonFile = (idAndTitleList: any) => {
-  fs.writeFile('eventDataParam.json', JSON.stringify(idAndTitleList, null, 2), 'utf8', (err) => {
-    if (err) {
-      console.error('ファイルの書き込みに失敗しました:', err);
-    } else {
-      console.log('データをeventDataParam.jsonに書き込みました。');
-    }
-  });
-
-}
+/**
+ * JSONファイルを出力する関数
+ * @param data 出力するデータ
+ * @param filename 出力するファイル名
+ */
+export const exportJsonFile = (data: Array<{ id: number; title: string }>, filename: string): void => {
+  const outputData = {
+    eventFormIdAndTitle: data
+  };
+  const jsonData = JSON.stringify(outputData, null, 2);
+  fs.writeFileSync(filename, jsonData, 'utf8');
+};
