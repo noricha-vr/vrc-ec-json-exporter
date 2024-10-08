@@ -6,6 +6,8 @@ import {exportJsonFile} from "./src/exportJsonFile";
 
 
 const outputFilePath = 'outputs/google-form.html';
+
+// イベントカレンダーのGoogleフォームのURL
 const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSevo0ax6ALIzllRCT7up-3KZkohD3VfG28rcOy8XMqDwRWevQ/formResponse';
 
 const main = async () => {
