@@ -1,26 +1,47 @@
-# google form parser
+# VRC EC JSON Exporter
 
-- Node.js
-  - v20.18.0
-- PackageManager
-  - pnpm 9.12.0
+GoogleフォームからデータをスクレイピングしてJSONファイルとして出力するツールです。
 
-## Getting Started
+## 必要要件
 
-### Install
+- Python 3.12以上
+- [uv](https://github.com/astral-sh/uv) (Pythonパッケージマネージャー)
+
+## セットアップ
 
 ```bash
-pnpm install
+# 依存パッケージのインストール
+uv pip install -e .
 ```
 
-### Run
+## 使用方法
 
 ```bash
-pnpm start
-```
-
-実行するとプロジェクトのルート直下に`eventDataParam.json`が生成されます。## 実行方法
-
-```bash
+# スクリプトの実行
 python -m src.main
 ```
+
+実行すると以下のファイルが生成されます：
+
+- `outputs/google-form.html`: 取得したGoogleフォームのHTML
+- `eventDataParam.json`: 抽出したID、タイトルのデータ
+
+## 出力形式
+
+`eventDataParam.json`は以下の形式で出力されます：
+
+```json
+[
+  {
+    "id": 123456789,
+    "title": "質問のタイトル"
+  },
+  ...
+]
+```
+
+## 開発環境
+
+- Python 3.12
+- requests: HTTPリクエスト用ライブラリ
+- types-requests: requestsの型定義
