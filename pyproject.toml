@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "requests>=2.31.0",
+    "types-requests>=2.31.0.20240311",  # requestsの型定義
+]
+
+[tool.ruff]
+line-length = 120
