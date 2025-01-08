@@ -1,13 +1,16 @@
 [project]
 name = "vrc-ec-json-exporter"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.12"
+description = "Export VRC event calendar data to JSON"
 dependencies = [
-    "requests>=2.31.0",
-    "types-requests>=2.31.0.20240311",  # requestsの型定義
+    "requests",
+    "beautifulsoup4",
+    "pytest",
 ]
 
-[tool.ruff]
-line-length = 120
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
