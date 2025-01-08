@@ -9,8 +9,8 @@ os.makedirs('outputs', exist_ok=True)
 
 # 設定
 OUTPUT_FILE_PATH = 'outputs/google-form.html'
+OUTPUT_JSON_FILE_PATH = 'outputs/event_data_param.json'
 URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSevo0ax6ALIzllRCT7up-3KZkohD3VfG28rcOy8XMqDwRWevQ/formResponse'
-OUTPUT_JSON_FILE_PATH = 'eventDataParam.json'
 
 
 def main():
