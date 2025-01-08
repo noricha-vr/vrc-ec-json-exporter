@@ -15,15 +15,22 @@ git clone git@github.com:noricha-vr/vrc-ec-json-exporter.git
 cd vrc-ec-json-exporter
 
 # 依存パッケージのインストール
+uv venv
+source .venv/bin/activate  # Unix/macOS の場合
+# または .venv\Scripts\activate  # Windows の場合
 uv pip install -e .
 ```
 
 ## 使用方法
 
 ```bash
+# 仮想環境のアクティベーション（まだアクティベートしていない場合）
+source .venv/bin/activate  # Unix/macOS の場合
+# または .venv\Scripts\activate  # Windows の場合
+
 # スクリプトの実行
 cd src
-python -m main
+python main.py
 ```
 
 実行すると以下のファイルが生成されます：
