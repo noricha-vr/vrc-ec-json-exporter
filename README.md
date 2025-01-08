@@ -19,4 +19,8 @@ pnpm install
 pnpm start
 ```
 
-実行するとプロジェクトのルート直下に`eventDataParam.json`が生成されます。
+実行するとプロジェクトのルート直下に`eventDataParam.json`が生成されます。## 実行方法
+
+```bash
+python -m src.main
+```
