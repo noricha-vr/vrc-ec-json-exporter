@@ -1,5 +1,16 @@
 eventDataParam.json
 outputs
-node_modules
+-node_modules
 .idea
 .DS_Store
++# Python
++__pycache__/
++*.py[cod]
++*$py.class
++.Python
++env/
++venv/
++.env
++.venv
++pip-log.txt
++pip-delete-this-directory.txt
