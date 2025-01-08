@@ -22,7 +22,8 @@ uv pip install -e .
 
 ```bash
 # スクリプトの実行
-python -m src.main
+cd src
+python -m main
 ```
 
 実行すると以下のファイルが生成されます：
